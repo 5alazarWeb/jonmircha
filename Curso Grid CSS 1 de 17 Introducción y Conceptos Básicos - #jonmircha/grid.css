@@ -58,3 +58,21 @@ img {
 	background-color: #666;
 	border: medium solid #999;
 }
+
+.grid-explicit {
+	display: grid;
+	/* Grid de 3 por 3 */
+	grid-template-columns: 50% 100px 1fr;
+	grid-template-rows: 2rem 20vh 30%;
+
+	/* Grid de 5 columnas por 4 filas */
+	grid-template-columns: repeat(5, 20%);
+	grid-template-rows: repeat(4, auto);
+
+	/* Grid de 4 columnas por 5 filas */
+	grid-template-columns: 20% repeat(2, 30%) 20%;
+	grid-template-rows: repeat(5, auto);
+
+	/*gap: row column*/
+	gap: 1vh 1vw;
+}
