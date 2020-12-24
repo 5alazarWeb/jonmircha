@@ -145,3 +145,10 @@ img {
 .footer {
 	grid-area: footer;
 }
+
+.grid-implicit {
+	display: grid;
+	/* Grid de 4c x 3r */
+	grid-template-columns: repeat(4, 1fr);
+	grid-template-rows: repeat(3, 150px);
+}
