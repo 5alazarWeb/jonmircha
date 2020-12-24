@@ -101,3 +101,19 @@ img {
 	grid-row: 1 / span 2;
 	grid-column: 1 / span 2;
 }
+
+.grid-line-names {
+	display: grid;
+	/* Grid de 3c x 3r */
+	grid-template-columns: repeat(3, 1fr);
+	grid-template-rows: repeat(3, 1fr);
+	grid-template-columns: [line-c1] 1fr [line-c2] 1fr [line-c3] 1fr [line-c4];
+	grid-template-rows: [line-r1] 1fr [line-r2] 1fr [line-r3] 1fr [line-r4];
+	grid-template-rows: [line-r1] auto [line-r2] auto [line-r3] auto [line-r4];
+}
+
+.grid-line-names .item:nth-child(3) {
+	color: cyan;
+	grid-row: line-r3 / line-r4;
+	grid-column: line-c1 / line-c4;
+}
