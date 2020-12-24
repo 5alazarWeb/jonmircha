@@ -117,3 +117,31 @@ img {
 	grid-row: line-r3 / line-r4;
 	grid-column: line-c1 / line-c4;
 }
+.grid-areas {
+	display: grid;
+	/* Grid de 2c x 3r */
+	grid-template-columns: 1fr 200px;
+	grid-template-rows: 100px 1fr 60px;
+	grid-template-rows: 100px repeat(2, 1fr) 60px;
+	grid-template-areas:
+		'header header'
+		'content sidebar'
+		'content .'
+		'footer footer';
+}
+
+.header {
+	grid-area: header;
+}
+
+.content {
+	grid-area: content;
+}
+
+.sidebar {
+	grid-area: sidebar;
+}
+
+.footer {
+	grid-area: footer;
+}
