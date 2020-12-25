@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Grid Layout con Lineas</title>
+		<title>Grid Layout con Áreas</title>
 		<style>
 			html {
 				box-sizing: border-box;
@@ -22,6 +22,12 @@
 				display: grid;
 				grid-template-columns: repeat(6, 1fr);
 				grid-template-rows: repeat(5, auto);
+				grid-template-areas:
+					'header header header header header header'
+					'nav nav nav nav nav nav'
+					'uc-left uc-left uc-center uc-center uc-right uc-right'
+					'middle middle middle lower lower lower'
+					'footer footer footer footer footer footer';
 			}
 
 			body > * {
@@ -34,89 +40,47 @@
 			}
 
 			.header {
-				grid-column: span 6;
-				grid-row: span 1;
+				grid-area: header;
 			}
 
 			.nav {
-				grid-column: span 6;
-				grid-row: span 1;
+				grid-area: nav;
 			}
 
 			.uc-left {
-				grid-column: span 2;
-				grid-row: span 1;
+				grid-area: uc-left;
 			}
 
 			.uc-center {
-				grid-column: span 2;
-				grid-row: span 1;
+				grid-area: uc-center;
 			}
 
 			.uc-right {
-				grid-column: span 2;
-				grid-row: span 1;
+				grid-area: uc-right;
 			}
 
 			.middle {
-				grid-column: span 3;
-				grid-row: span 1;
+				grid-area: middle;
 			}
 
 			.lower {
-				grid-column: span 3;
-				grid-row: span 1;
+				grid-area: lower;
 			}
 
 			.footer {
-				grid-column: span 6;
-				grid-row: 5 / 6;
+				grid-area: footer;
 			}
 
 			@media screen and (min-width: 1024px) {
 				body {
 					grid-template-columns: repeat(5, 1fr);
 					grid-template-rows: repeat(5, auto);
-				}
-
-				.header {
-					grid-column: span 5;
-					grid-row: span 1;
-				}
-
-				.nav {
-					grid-column: 1 / 2;
-					grid-row: 2 / 5;
-				}
-
-				.uc-left {
-					grid-column: 2 / 3;
-					grid-row: 2 / 3;
-				}
-
-				.uc-center {
-					grid-column: 3 / 5;
-					grid-row: 2 / 3;
-				}
-
-				.uc-right {
-					grid-column: 5 / 6;
-					grid-row: 2 / 3;
-				}
-
-				.middle {
-					grid-column: span 4;
-					grid-row: span 1;
-				}
-
-				.lower {
-					grid-column: span 4;
-					grid-row: span 1;
-				}
-
-				.footer {
-					grid-column: span 6;
-					grid-row: 5 / 6;
+					grid-template-areas:
+						'header header header header header'
+						'nav uc-left uc-center uc-center uc-right'
+						'nav middle middle middle middle'
+						'nav lower lower lower lower'
+						'footer footer footer footer footer';
 				}
 			}
 		</style>
