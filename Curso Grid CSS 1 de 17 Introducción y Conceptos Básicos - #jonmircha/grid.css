@@ -336,8 +336,8 @@ img {
 }
 
 .subgrid {
-	/* Paa que la caracteristica de subgrid funcione es necesario hacer lo siguiente:
-	1. Definir explicitamente el tomaño que ocupara el que aplicara subgrid
+	/* Para que la característica de subgrid funcione es necesario hacer lo siguiente:
+	1. Definir explícitamente el tamaño que ocupara el que aplicara subgrid
 	dentro del contenedor padre grid, es decir definir sus propiedades
 	grid-column y grid-row.
 	2. Aplicar display grid al elemento que aplicara subgrid. */
